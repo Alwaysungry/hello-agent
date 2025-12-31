@@ -30,7 +30,7 @@ def main():
     model.load_state_dict(ckpt["model"])
     model.eval()
 
-    prompt = "智能体是"
+    prompt = "LLM是"
     idx = torch.tensor([tok.encode(prompt)], dtype=torch.long).to(device)
     out = model.generate(idx, max_new_tokens=200)
     print(tok.decode(out[0].tolist()))

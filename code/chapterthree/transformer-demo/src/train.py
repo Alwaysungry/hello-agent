@@ -2,6 +2,7 @@
 import os
 import torch
 import numpy as np
+import pdfplumber
 from torch.utils.data import Dataset, DataLoader
 from tqdm import tqdm
 from config import Config
@@ -23,8 +24,13 @@ def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"
     cfg.device = device
 
-    with open("data/tiny.txt", "r", encoding="utf-8") as f:
-        text = f.read()
+    import pdfplumber
+
+    with pdfplumber.open("data/LLMBook.pdf") as pdf:
+        text = ""
+        for page in pdf.pages:
+            text += page.extract_text() or ""
+
 
     tok = CharTokenizer(text)
     ids = tok.encode(text)
