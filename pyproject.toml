@@ -1,29 +1,21 @@
 [project]
 name = "hello-agent"
 version = "0.1.0"
-description = "learn hello agent"
+description = ""
 authors = [
-    {name = "Your Name",email = "you@example.com"}
+    {name = "alwaysungry"}
 ]
-license = {text = "n"}
-readme = "README.md"
-requires-python = ">=3.12, <3.15"
+requires-python = ">=3.13,<3.15"
 dependencies = [
-    "requests (>=2.32.5,<3.0.0)",
-    "tavily-python (>=0.7.17,<0.8.0)",
-    "openai (>=2.14.0,<3.0.0)",
     "torch (>=2.9.1,<3.0.0)",
+    "match (>=0.3.2,<0.4.0)",
     "numpy (>=2.4.0,<3.0.0)",
-    "tqdm (>=4.67.1,<5.0.0)",
-    "pdfplumber (>=0.11.8,<0.12.0)"
+    "pdfplumber (>=0.11.8,<0.12.0)",
+    "requests (>=2.32.5,<3.0.0)",
+    "transformers (>=4.57.3,<5.0.0)"
 ]
 
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-[[tool.poetry.source]]
-name = "mirrors"
-url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
-priority = "primary"

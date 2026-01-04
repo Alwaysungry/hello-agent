@@ -132,7 +132,7 @@ import re
 
 # --- 1. 配置LLM客户端 ---
 # 请根据您使用的服务，将这里替换成对应的凭证和地址
-API_KEY = "sk-000d84331c0b43c6a457e7fdc24902de" #deepseek
+API_KEY = "sk-000d887921c0b43c6a457e7fdc24902de" #deepseek
 BASE_URL = "https://api.deepseek.com"
 MODEL_ID = "deepseek-chat"
 TAVILY_API_KEY="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"

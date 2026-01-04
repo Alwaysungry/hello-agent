@@ -167,16 +167,16 @@ LLaMA 4 Scout：支持千万级 Token 上下文。
 
 - 例子串联：
 
-    Bigram → P(agent | datawhale)
+    - Bigram → P(agent | datawhale)
 
-    词向量 → King - Man + Woman ≈ Queen
+    - 词向量 → King - Man + Woman ≈ Queen
 
-    LSTM → 解决长期依赖
+    - LSTM → 解决长期依赖
 
-    Transformer → 自注意力捕捉全局关系
+    - Transformer → 自注意力捕捉全局关系
 
-    GPT → 自回归生成
+    - GPT → 自回归生成
 
-    Qwen → 本地开源对话
+    - Qwen → 本地开源对话
 
-    GPT-5/Gemini → 多模态与实时交互
+    - GPT-5/Gemini → 多模态与实时交互
