@@ -31,12 +31,12 @@ def search_google(query: str) -> str:
         client = GoogleSearch(parameters)
         results = client.get_dict()
 
-        print (f"Search results received: {results}")
+        # print (f"Search results received: {results}")
         
         if "answer_box_list" in results:
             return "\n".join(results["answer_box_list"])
         if "answer_box" in results:
-            return results["answer_box"].get("answer", "No direct answer found.")
+            return results["answer_box"].get("snippet", "No direct answer found.")
         if "knowledge_graph" in results and "description" in results["knowledge_graph"]:
             return results["knowledge_graph"]["description"]
         if "organic_results" in results and results["organic_results"]:
@@ -50,6 +50,19 @@ def search_google(query: str) -> str:
         print(f"An error occurred while searching Google: {e}")
         return {}
     
+import math
+
+def calculator(expression: str) -> str:
+    try:
+        # 只允许安全的 eval，避免注入风险
+        result = eval(expression, {"__builtins__": None}, {"math": math})
+        return str(result)
+    except Exception as e:
+        return f"计算错误: {e}"
+    
 if __name__ == "__main__":
-    query = "What is the capital of France?"
-    print(search_google(query))
+    # query = "What is the capital of France?"
+    # print(search_google(query))
+
+    question = "math.sqrt(16)"
+    print(calculator(question))
