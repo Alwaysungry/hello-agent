@@ -1,0 +1,27 @@
+[project]
+name = "autogen-demo"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Alwaysungry"}
+]
+readme = "README.md"
+requires-python = ">=3.13, <3.15"
+dependencies = [
+    "autogen-ext (>=0.7.5,<0.8.0)",
+    "dotenv (>=0.9.9,<0.10.0)",
+    "pytest (>=9.0.2,<10.0.0)",
+    "python-dotenv (>=1.2.1,<2.0.0)",
+    "openai (>=2.14.0,<3.0.0)",
+    "autogen-core (>=0.7.5,<0.8.0)",
+    "autogen-agentchat (>=0.7.5,<0.8.0)",
+    "tiktoken (>=0.12.0,<0.13.0)",
+    "streamlit (>=1.52.2,<2.0.0)",
+    "pandas (>=2.3.3,<3.0.0)",
+    "plotly (>=6.5.1,<7.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
