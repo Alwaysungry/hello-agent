@@ -8,7 +8,8 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.13, <3.15"
 dependencies = [
-    "agentscope (>=1.0.11,<2.0.0)"
+    "agentscope (>=1.0.11,<2.0.0)",
+    "python-dotenv (>=1.2.1,<2.0.0)"
 ]
 
 
