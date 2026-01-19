@@ -19,7 +19,7 @@ SUPPORTED_PROVIDERS = Literal[
         "auto",
 ]
 
-class HelloAgentsLLMClient:
+class HelloAgentsLLM:
     """
     hello_agents的LLM客户端封装，支持与OpenAI兼容的API交互。
     1. 多提供商支持：实现对 OpenAI、ModelScope、智谱 AI 等多种主流 LLM 服务商的无缝切换，避免框架与特定供应商绑定。
