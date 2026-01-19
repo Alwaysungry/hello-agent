@@ -230,6 +230,8 @@ class HelloAgentsLLMClient:
         """
         创建OpenAI客户端实例。
         """
+        print(f"使用提供商: {self.provider}, 模型: {self.model}")
+        print(f"API基础URL: {self.base_url}")
         return OpenAI(
             api_key=self.api_key,
             api_base=self.base_url,

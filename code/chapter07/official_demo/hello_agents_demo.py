@@ -1,7 +1,11 @@
 from hello_agents import SimpleAgent, HelloAgentsLLM
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
+
+print (os.getenv("LLM_BASE_URL"))
+print (os.getenv("LLM_MODEL_ID"))
 
 llm = HelloAgentsLLM()
 
